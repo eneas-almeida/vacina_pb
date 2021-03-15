@@ -1,46 +1,61 @@
 import { IUser } from './model/IUser'
 import { Either, left, right } from '@shared/Either'
-import { ICreateUserDTO } from './dtos/ICreateUserDTO'
-import { EmailError } from './errors/EmailError'
-import { NameError } from './errors/NameError'
-import { PasswordError } from './errors/PasswordError'
-import { Email } from './types/Email'
+import { IUserDTO } from './dtos/IUserDTO'
 import { Name } from './types/Name'
+import { NameError } from './errors/NameError'
+import { BirthDate } from './types/BirthDate'
+import { BirthDateError } from './errors/BirthDateError'
+import { Email } from './types/Email'
+import { EmailError } from './errors/EmailError'
 import { Password } from './types/Password'
+import { PasswordError } from './errors/PasswordError'
 
 class User implements IUser {
-    private readonly _name: Name
-    private readonly _email: Email
-    private readonly _password: Password
+    private readonly name: Name
+    private readonly birth_date: BirthDate
+    private readonly email: Email
+    private readonly password: Password
 
-    private constructor(name: Name, email: Email, password: Password) {
-        this._name = name
-        this._email = email
-        this._password = password
+    private constructor(name: Name, birth_date: BirthDate, email: Email, password: Password) {
+        this.name = name
+        this.birth_date = birth_date
+        this.email = email
+        this.password = password
         Object.freeze(this)
     }
 
-    getName(): string {
-        return this._name.value
+    public getName(): string {
+        return this.name.value
     }
 
-    getEmail(): string {
-        return this._email.value
+    public getBirthDate(): string {
+        return this.birth_date.value
     }
 
-    getPassword(): string {
-        return this._password.value
+    public getEmail(): string {
+        return this.email.value
     }
 
-    static create(data: ICreateUserDTO): Either<NameError | EmailError | PasswordError, User> {
-        const { name, email, password } = data
+    public getPassword(): string {
+        return this.password.value
+    }
+
+    static create(
+        data: IUserDTO
+    ): Either<NameError | BirthDateError | EmailError | PasswordError, User> {
+        const { name, birth_date, email, password } = data
 
         const nameOrEror: Either<NameError, Name> = Name.create(name)
+        const birthDateOrError: Either<BirthDateError, BirthDate> = BirthDate.create(birth_date)
         const emailOrError: Either<EmailError, Email> = Email.create(email)
         const passwordOrError: Either<PasswordError, Password> = Password.create(password)
 
         if (nameOrEror.isLeft()) {
             return left(new NameError(name))
+        }
+
+        if (birthDateOrError.isLeft()) {
+            return left(new BirthDateError(birth_date))
         }
 
         if (emailOrError.isLeft()) {
@@ -52,10 +67,11 @@ class User implements IUser {
         }
 
         const nameValue: Name = nameOrEror.value
+        const birthDateValue: BirthDate = birthDateOrError.value
         const emailValue: Email = emailOrError.value
         const passwordValue: Password = passwordOrError.value
 
-        return right(new User(nameValue, emailValue, passwordValue))
+        return right(new User(nameValue, birthDateValue, emailValue, passwordValue))
     }
 }
 

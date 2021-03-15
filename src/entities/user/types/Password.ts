@@ -2,10 +2,10 @@ import { Either, left, right } from '@shared/Either'
 import { PasswordError } from '../errors/PasswordError'
 
 class Password {
-    private readonly _password: string
+    private readonly password: string
 
     private constructor(password: string) {
-        this._password = password
+        this.password = password
         Object.freeze(this)
     }
 
@@ -18,7 +18,7 @@ class Password {
     }
 
     get value(): string {
-        return this._password
+        return this.password
     }
 
     static validate(password: string): boolean {

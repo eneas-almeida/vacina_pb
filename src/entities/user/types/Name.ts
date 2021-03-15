@@ -2,10 +2,10 @@ import { Either, left, right } from '@shared/Either'
 import { NameError } from '../errors/NameError'
 
 class Name {
-    private readonly _name: string
+    private readonly name: string
 
     private constructor(name: string) {
-        this._name = name
+        this.name = name
         Object.freeze(this)
     }
 
@@ -18,7 +18,7 @@ class Name {
     }
 
     get value(): string {
-        return this._name
+        return this.name
     }
 
     static validate(name: string): boolean {

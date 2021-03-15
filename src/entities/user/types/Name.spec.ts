@@ -1,4 +1,4 @@
-import { Name } from '../../types/Name'
+import { Name } from './Name'
 
 describe('Validador de nome', () => {
     it('Deve aceitar um nome válido (1).', () => {

@@ -2,10 +2,10 @@ import { Either, left, right } from '../../../shared/Either'
 import { EmailError } from '../errors/EmailError'
 
 class Email {
-    private readonly _email: string
+    private readonly email: string
 
     private constructor(email: string) {
-        this._email = email
+        this.email = email
         Object.freeze(this)
     }
 
@@ -18,7 +18,7 @@ class Email {
     }
 
     get value(): string {
-        return this._email
+        return this.email
     }
 
     static validate(email: string): boolean {

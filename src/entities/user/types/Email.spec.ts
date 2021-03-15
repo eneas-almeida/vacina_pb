@@ -1,4 +1,4 @@
-import { Email } from '../../types/Email'
+import { Email } from './Email'
 
 describe('Validador de email', () => {
     it('Deve aceitar um email válido (1).', () => {
@@ -40,6 +40,7 @@ describe('Validador de email', () => {
         const email = 'eneas.computacao@' + domain + '.com'
         expect(Email.validate(email)).toBe(false)
     })
+
     it('Não deve aceitar ponto como primeiro caractere - parte do domínio (10).', () => {
         expect(Email.validate('venzel@.gmail.com')).toBe(false)
     })

@@ -8,6 +8,7 @@ describe('Validador de entidade usuário', () => {
 
         const user_or_error = User.create({
             name: name,
+            birth_date: '28/10/1983',
             email: 'tiago@gmail.com',
             password: 'ifpb#202020',
         })
