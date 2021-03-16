@@ -45,33 +45,33 @@ class User implements IUser {
     ): Either<NameError | BirthDateError | EmailError | PasswordError, User> {
         const { name, birth_date, email, password } = data
 
-        const nameOrEror: Either<NameError, Name> = Name.create(name)
-        const birthDateOrError: Either<BirthDateError, BirthDate> = BirthDate.create(birth_date)
-        const emailOrError: Either<EmailError, Email> = Email.create(email)
-        const passwordOrError: Either<PasswordError, Password> = Password.create(password)
+        const name_or_error: Either<NameError, Name> = Name.create(name)
+        const birth_date_or_error: Either<BirthDateError, BirthDate> = BirthDate.create(birth_date)
+        const email_or_error: Either<EmailError, Email> = Email.create(email)
+        const password_or_error: Either<PasswordError, Password> = Password.create(password)
 
-        if (nameOrEror.isLeft()) {
+        if (name_or_error.isLeft()) {
             return left(new NameError(name))
         }
 
-        if (birthDateOrError.isLeft()) {
+        if (birth_date_or_error.isLeft()) {
             return left(new BirthDateError(birth_date))
         }
 
-        if (emailOrError.isLeft()) {
+        if (email_or_error.isLeft()) {
             return left(new EmailError(email))
         }
 
-        if (passwordOrError.isLeft()) {
+        if (password_or_error.isLeft()) {
             return left(new PasswordError(password))
         }
 
-        const nameValue: Name = nameOrEror.value
-        const birthDateValue: BirthDate = birthDateOrError.value
-        const emailValue: Email = emailOrError.value
-        const passwordValue: Password = passwordOrError.value
+        const name_value: Name = name_or_error.value
+        const birth_date_value: BirthDate = birth_date_or_error.value
+        const email_value: Email = email_or_error.value
+        const password_value: Password = password_or_error.value
 
-        return right(new User(nameValue, birthDateValue, emailValue, passwordValue))
+        return right(new User(name_value, birth_date_value, email_value, password_value))
     }
 }
 
