@@ -36,7 +36,7 @@ describe('Validador de email', () => {
     })
 
     it('Não deve aceitar mais de 255 caracteres - parte do domínio (9).', () => {
-        const domain = 'c'.repeat(260)
+        const domain = 'c'.repeat(260) // Repete o c 260 vezes
         const email = 'eneas.computacao@' + domain + '.com'
         expect(Email.validate(email)).toBe(false)
     })
