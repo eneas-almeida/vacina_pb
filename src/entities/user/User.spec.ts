@@ -4,6 +4,7 @@ import { NameError } from '@entities/user/errors/NameError'
 import { BirthDateError } from './errors/BirthDateError'
 import { EmailError } from './errors/EmailError'
 import { PasswordError } from './errors/PasswordError'
+import { IsRiskGroupError } from './errors/IsRiskGroupError'
 
 describe('Validador de entidade usuário', () => {
     test('Não deve poder criar um usuário, com um nome inválido (1).', async () => {
@@ -14,6 +15,7 @@ describe('Validador de entidade usuário', () => {
             birth_date: '28/10/1983',
             email: 'tiago@gmail.com',
             password: 'aa4xxRzqq#',
+            is_risk_group: '1',
         }
 
         const user_or_error = User.create(new_user)
@@ -30,6 +32,7 @@ describe('Validador de entidade usuário', () => {
             birth_date: birth_date,
             email: 'tiago@gmail.com',
             password: 'aa4xxRzqq#',
+            is_risk_group: '1',
         }
 
         const user_or_error = User.create(new_user)
@@ -46,6 +49,7 @@ describe('Validador de entidade usuário', () => {
             birth_date: '28/10/1983',
             email: email,
             password: 'aa4xxRzqq#',
+            is_risk_group: '1',
         }
 
         const user_or_error = User.create(new_user)
@@ -62,11 +66,29 @@ describe('Validador de entidade usuário', () => {
             birth_date: '28/10/1983',
             email: 'tiago@gmail.com',
             password: password,
+            is_risk_group: '1',
         }
 
         const user_or_error = User.create(new_user)
 
         // Deve retornar uma exceção do tipo PasswordError
         expect(user_or_error).toEqual(left(new PasswordError(password)))
+    })
+
+    test('Não deve poder criar um usuário, com um estado de grupo de risco inválido (4).', async () => {
+        const is_risk_group = '-1'
+
+        const new_user = {
+            name: 'Tiago Rizzo',
+            birth_date: '28/10/1983',
+            email: 'tiago@gmail.com',
+            password: 'aa4xxRzqq#',
+            is_risk_group: is_risk_group,
+        }
+
+        const user_or_error = User.create(new_user)
+
+        // Deve retornar uma exceção do tipo IsRiskGroupError
+        expect(user_or_error).toEqual(left(new IsRiskGroupError(is_risk_group)))
     })
 })

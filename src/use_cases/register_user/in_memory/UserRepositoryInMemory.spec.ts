@@ -1,7 +1,7 @@
 import { UserRepositoryInMemory } from './UserRepositoryInMemory'
 import { IUserDTO } from '@entities/user/dtos/IUserDTO'
 
-describe('Criação do usuário em memória', () => {
+describe('Criação do repositório do usuário em memória', () => {
     test('Deve poder adicionar o usuário ao repositório (1).', async () => {
         const users: IUserDTO[] = [] // Estrutura de lista vazia
 
@@ -12,6 +12,7 @@ describe('Criação do usuário em memória', () => {
             birth_date: '28/12/1980',
             email: 'tiago@gmail.com',
             password: '2012312',
+            is_risk_group: '1',
         }
 
         await user_repository.add(new_user) // Adiciona o novo usuário ao repositório
@@ -28,18 +29,21 @@ describe('Criação do usuário em memória', () => {
                 birth_date: '23/11/1983',
                 email: 'tiago@gmail.com',
                 password: '2012312',
+                is_risk_group: '1',
             },
             {
                 name: 'Marcos Mellen',
                 birth_date: '12/07/1970',
                 email: 'marcos@gmail.com',
                 password: '4235122',
+                is_risk_group: '1',
             },
             {
                 name: 'Leonel Messi',
                 birth_date: '08/09/1987',
                 email: 'messi@gmail.com',
                 password: '0123233',
+                is_risk_group: '1',
             },
         ]
 
@@ -57,18 +61,21 @@ describe('Criação do usuário em memória', () => {
                 birth_date: '23/11/1983',
                 email: 'tiago@gmail.com',
                 password: '2012312',
+                is_risk_group: '1',
             },
             {
                 name: 'Marcos Mellen',
                 birth_date: '12/07/1970',
                 email: 'marcos@gmail.com',
                 password: '4235122',
+                is_risk_group: '1',
             },
             {
                 name: 'Leonel Messi',
                 birth_date: '08/09/1987',
                 email: 'messi@gmail.com',
                 password: '0123233',
+                is_risk_group: '1',
             },
         ]
 
@@ -86,18 +93,21 @@ describe('Criação do usuário em memória', () => {
                 birth_date: '23/11/1983',
                 email: 'tiago@gmail.com',
                 password: '2012312',
+                is_risk_group: '1',
             },
             {
                 name: 'Marcos Mellen',
                 birth_date: '12/07/1970',
                 email: 'marcos@gmail.com',
                 password: '4235122',
+                is_risk_group: '1',
             },
             {
                 name: 'Leonel Messi',
                 birth_date: '08/09/1987',
                 email: 'messi@gmail.com',
                 password: '0123233',
+                is_risk_group: '1',
             },
         ]
 

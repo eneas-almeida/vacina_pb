@@ -1,8 +1,13 @@
 interface IUser {
     getName(): string
-    getBirthDate(): string
+
+    getBirthDate(): Date
+
     getEmail(): string
+
     getPassword(): string
+
+    getIsRiskGroup(): boolean
 }
 
 export { IUser }

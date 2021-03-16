@@ -17,8 +17,12 @@ class BirthDate {
         return right(new BirthDate(bith_date))
     }
 
-    get value(): string {
-        return this.birth_date
+    get value(): Date {
+        const [day, month, year] = this.birth_date.split('/')
+
+        const generate_date = new Date(`${year}-${month}-${day}`)
+
+        return generate_date
     }
 
     static validate(bith_date: string): boolean {
