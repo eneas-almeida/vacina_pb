@@ -8,15 +8,15 @@ class UserRepositoryInMemory implements IUserRepository {
         this.user_repository = users
     }
 
-    public async findByEmail(email: string): Promise<IUserDTO | undefined> {
+    async findByEmail(email: string): Promise<IUserDTO | undefined> {
         return this.user_repository.find((data) => data.email === email)
     }
 
-    public async add(user_data: IUserDTO): Promise<void> {
+    async add(user_data: IUserDTO): Promise<void> {
         this.user_repository.push(user_data)
     }
 
-    public async removeByEmail(email: string): Promise<void> {
+    async removeByEmail(email: string): Promise<void> {
         const user_index = this.user_repository.findIndex((data) => data.email === email)
 
         if (user_index !== -1) {

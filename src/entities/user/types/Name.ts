@@ -26,11 +26,11 @@ class Name {
             return false
         }
 
-        if (name.length < 6) {
+        if (name.length < 10) {
             return false
         }
 
-        if (name.length > 24) {
+        if (name.length > 25) {
             return false
         }
 

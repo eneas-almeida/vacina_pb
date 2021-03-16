@@ -22,9 +22,21 @@ class Password {
     }
 
     static validate(password: string): boolean {
-        const tester = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+        const tester = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\])]).{8,}$/
 
         if (!password) {
+            return false
+        }
+
+        if (!password) {
+            return false
+        }
+
+        if (password.length < 5) {
+            return false
+        }
+
+        if (password.length > 10) {
             return false
         }
 
