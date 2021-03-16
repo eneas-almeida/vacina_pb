@@ -8,7 +8,7 @@ import { IsRiskGroupError } from './errors/IsRiskGroupError'
 
 describe('Validador de entidade usuário', () => {
     test('Não deve poder criar um usuário, com um nome inválido (1).', async () => {
-        const name = 'Tiago'
+        const name = 'Tiago' // Deve conter nome e sobrenome: Tiago Rizzo.
 
         const new_user = {
             name: name,
@@ -25,7 +25,7 @@ describe('Validador de entidade usuário', () => {
     })
 
     test('Não deve poder criar um usuário, sem uma data válida (dia/mes/ano) (2).', async () => {
-        const birth_date = 'xx/10/1983'
+        const birth_date = 'xx/10/1983' // Deve conter um dia válido em número
 
         const new_user = {
             name: 'Tiago Rizzo',
@@ -42,7 +42,7 @@ describe('Validador de entidade usuário', () => {
     })
 
     test('Não deve poder criar um usuário, com um email inválido (3).', async () => {
-        const email = '@gmail.com'
+        const email = '@gmail.com' // deve conter a primeira parte válida.
 
         const new_user = {
             name: 'Tiago Rizzo',
@@ -59,7 +59,7 @@ describe('Validador de entidade usuário', () => {
     })
 
     test('Não deve poder criar um usuário, com um password inválido (4).', async () => {
-        const password = '12345'
+        const password = '12345' // Deve conter pelo menos: número, letra maiúscula e carater especial.
 
         const new_user = {
             name: 'Tiago Rizzo',
@@ -76,7 +76,7 @@ describe('Validador de entidade usuário', () => {
     })
 
     test('Não deve poder criar um usuário, com um estado de grupo de risco inválido (4).', async () => {
-        const is_risk_group = '-1'
+        const is_risk_group = '-1' // Deve conter os estados em texto: 0, 1, true ou falso.
 
         const new_user = {
             name: 'Tiago Rizzo',
