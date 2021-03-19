@@ -12,9 +12,13 @@ A atividade faz parte da disciplina **Testes de Software** ministrada pela Profe
 
 O código foi escrito em Typescript, estruturado e baseado em uma Arquitetura Limpa, Design Orientado a Domínio (DDD) e Desenvolvimento Orientado a Testes (TDD), de acordo com ensinamentos de Martin Fowler em seu livro sobre refatoração e arquitetura limpa.
 
-## Entidade principal (usuário)
+## Classes a serem testadas
 
-:link: [Usuário](./src/enties/../entities/user/User.ts)
+:link: [Usuário](./src/entities/user/User.ts) (Entidade principal)<br><br>
+:link: [Nome](./src/entities/user/types/Name.ts)<br>
+:link: [Data de aniversário](./src/entities/user/types/BirthDate.ts)<br>
+:link: [Grupo de risco](./src/entities/user/types/IsRiskGroup.ts)<br><br>
+:link: [Repositório de usuário](./src/use_cases/register_user/in_memory/UserRepositoryInMemory.ts)
 
 ## Arquivos de testes
 
