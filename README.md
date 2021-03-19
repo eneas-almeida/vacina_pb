@@ -14,7 +14,7 @@ O código foi escrito em Typescript, estruturado e baseado em uma Arquitetura Li
 
 ## Entidade principal (usuário)
 
--   [Usuário](./src/enties/../entities/user/User.ts)
+:link: [Usuário](./src/enties/../entities/user/User.ts)
 
 ## Arquivos de testes
 
@@ -22,9 +22,9 @@ São realizados testes em nível de: Tipos de dados (types), Entidades e Reposit
 
 ### 1. Testes em nível de tipos de dados
 
-:link: [Nome](./src/entities/user/types/Name.spec.ts)
-:link: [Data de aniversário](./src/entities/user/types/BirthDate.spec.ts)
-:link: [Grupo de risco](./src/entities/user/types/IsRiskGroup.spec.ts)
+:link: [Nome](./src/entities/user/types/Name.spec.ts)<br>
+:link: [Data de aniversário](./src/entities/user/types/BirthDate.spec.ts)<br>
+:link: [Grupo de risco](./src/entities/user/types/IsRiskGroup.spec.ts)<br>
 
 Além dos citados acima, também foram realizados testes em tipos de dados: :link: [Email](./src/entities/user/types/Email.spec.ts) e :link: [Password](./src/entities/user/types/Password.spec.ts)
 
