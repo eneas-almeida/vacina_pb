@@ -22,19 +22,19 @@ São realizados testes em nível de: Tipos de dados (types), Entidades e Reposit
 
 ### 1. Testes em nível de tipos de dados
 
--   [Nome](./src/entities/user/types/Name.spec.ts)
--   [Data de aniversário](./src/entities/user/types/BirthDate.spec.ts)
--   [Grupo de risco](./src/entities/user/types/IsRiskGroup.spec.ts)
+-   :link: [Nome](./src/entities/user/types/Name.spec.ts)
+-   :link: [Data de aniversário](./src/entities/user/types/BirthDate.spec.ts)
+-   :link: [Grupo de risco](./src/entities/user/types/IsRiskGroup.spec.ts)
 
-Além dos citados acima, também foram realizados testes em tipos de dados: [Email](./src/entities/user/types/Email.spec.ts) e [Password](./src/entities/user/types/Password.spec.ts)
+Além dos citados acima, também foram realizados testes em tipos de dados: :link: [Email](./src/entities/user/types/Email.spec.ts) e :link: [Password](./src/entities/user/types/Password.spec.ts)
 
 ### 2. Testes em nível de entidade
 
--   [Entidade usuário](./src/entities/user/User.spec.ts)
+-   :link: [Entidade usuário](./src/entities/user/User.spec.ts)
 
 ### 3. Testes em nível de repositório
 
--   [Repositório do usuário](./src/use_cases/register_user/in_memory/UserRepositoryInMemory.spec.ts)
+-   :link: [Repositório do usuário](./src/use_cases/register_user/in_memory/UserRepositoryInMemory.spec.ts)
 
 Para executar este projeto, siga os sequintes passos:
 
