@@ -1,6 +1,4 @@
-# README
-
-## Atividade de testes (TDD)
+# Atividade de testes (TDD)
 
 ![VacibaPB](./src/main/images/vacina-pb.png)
 
@@ -19,6 +17,10 @@ O código foi escrito em Typescript, estruturado e baseado em uma Arquitetura Li
 :link: [Data de aniversário](./src/entities/user/types/BirthDate.ts)<br>
 :link: [Grupo de risco](./src/entities/user/types/IsRiskGroup.ts)<br><br>
 :link: [Repositório de usuário](./src/use_cases/register_user/in_memory/UserRepositoryInMemory.ts)
+
+![Jest](./src/main/images/jest.png)
+
+Como ferramenta de teste foi utilizado o framework **Jest**.
 
 ## Arquivos de testes
 
@@ -41,6 +43,8 @@ Além dos citados acima, também foram realizados testes em tipos de dados: :lin
 :link: [Repositório do usuário](./src/use_cases/register_user/in_memory/UserRepositoryInMemory.spec.ts)
 
 Para executar este projeto, siga os sequintes passos:
+
+**Importante:** Necessário ter o yarn ou npm instalado.
 
 ```bash
 # Após clonar o repositório
