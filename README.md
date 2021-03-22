@@ -18,11 +18,11 @@ O código foi escrito em Typescript, estruturado e baseado em uma Arquitetura Li
 :link: [Grupo de risco](./src/entities/user/types/IsRiskGroup.ts)<br><br>
 :link: [Repositório de usuário](./src/use_cases/register_user/in_memory/UserRepositoryInMemory.ts)
 
+## Testes
+
 ![Jest](./src/main/images/jest.png)
 
-Como ferramenta de teste foi utilizado o framework **Jest**.
-
-## Arquivos de testes
+Como ferramenta de teste foi utilizado **Jest**, um framework voltado para javascript/typescript.
 
 São realizados testes em nível de: Tipos de dados (types), Entidades e Repositórios.
 
