@@ -19,7 +19,7 @@ describe('Criação do repositório do usuário em memória', () => {
 
         const exists_user = await user_repository.findByEmail('tiago@gmail.com') // Existe o usuário?
 
-        expect(exists_user?.email).toBe('tiago@gmail.com') // Executa a diretiva final
+        expect(exists_user?.email).toBe('tiagotobias@gmail.com') // Executa a diretiva final
     })
 
     test('Deve poder retornar um usuário, se ele existe no repositório (2).', async () => {
