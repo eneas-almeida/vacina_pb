@@ -1,6 +1,8 @@
 # Case de testes (TDD)
 
+<p align="center">
 ![VacibaPB](./src/main/images/vacina-pb.png)
+</p>
 
 Case de testes (TDD) em Typescript e NodeJS, utilizando padrões de projetos e modelagem de domínio, baseado em uma Arquitetura Limpa, de acordo com ensinamentos de Martin Fowler em seu livro sobre refatoração e arquitetura limpa.
 
