@@ -1,14 +1,8 @@
-# Atividade de testes (TDD)
+# Case de testes (TDD)
 
 ![VacibaPB](./src/main/images/vacina-pb.png)
 
-A atividade faz parte da disciplina **Testes de Software** ministrada pela Profesora Doutora **Mirna Maia**, que consiste em desenvolver um código orietando a testes (TDD) de um cadastro de usuários, utilizando os seguintes campos:
-
--   Nome completo
--   Data de nascimento
--   Grupo de risco
-
-O código foi escrito em Typescript, estruturado e baseado em uma Arquitetura Limpa, Design Orientado a Domínio (DDD) e Desenvolvimento Orientado a Testes (TDD), de acordo com ensinamentos de Martin Fowler em seu livro sobre refatoração e arquitetura limpa.
+Case de testes (TDD) em Typescript, utilizando padrões de projetos e modelagem de domínio, baseado em uma Arquitetura Limpa, de acordo com ensinamentos de Martin Fowler em seu livro sobre refatoração e arquitetura limpa.
 
 ## Classes a serem testadas
 
@@ -65,4 +59,6 @@ Resultado:
 
 ![Resultado](./src/main/images/resultado-tests.png)
 
-O código no presente repositório é de autoria de Edivam Enéas de Almeida Júnior.
+## Autor
+
+Edivam Enéas de Almeida Júnior.
