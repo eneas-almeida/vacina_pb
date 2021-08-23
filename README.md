@@ -70,4 +70,4 @@ Resultado:
 
 ## Autor
 
-Edivam Enéas de Almeida Júnior.
+Edivam Enéas de Almeida Júnior
