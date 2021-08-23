@@ -2,12 +2,16 @@
 
 ![VacibaPB](./src/main/images/vacina-pb.png)
 
-Case de testes (TDD) em Typescript e NodeJS, utilizando padrões de projetos e modelagem de domínio, baseado em uma Arquitetura Limpa, de acordo com ensinamentos de Martin Fowler em seu livro sobre refatoração e arquitetura limpa.
+Case de testes (TDD) em **Typescript** e **NodeJS**, utilizando **padrões de projetos** e **modelagem de domínio**, baseado em uma **Arquitetura Limpa**, de acordo com ensinamentos de **Martin Fowler** em seu livro sobre refatoração e arquitetura limpa.
 
 <p align="left">
     <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="Typescript" title="Typescript" width="30" height="30" /> 
     <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="NodeJS" title="NodeJS" width="30" height="30" /> 
 </p>
+
+## Influenciadores
+
+- Otávio Lemos (Arquitetura e TDD com Typescript)
 
 ## Classes a serem testadas
 
